@@ -8,11 +8,11 @@
 
 查看修改的内容
 
-##### git add <file>
+##### git add filename
 
 往版本库中添加文件(包括新增，修改)，一次可以提交多个文件,实际上就是把文件修改添加到暂存区
 
-##### git rm <file>
+##### git rm filename
 
 往版本库中删除文件
 
@@ -32,18 +32,18 @@
 
 用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100
 
-##### git diff HEAD -- <file>
+##### git diff HEAD -- filename
 
 查看工作区和版本库里面最新版本的区别
 
-##### git checkout -- <file>
+##### git checkout -- filename
 
 将文件的修改撤销
 
 + 自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态
 + 已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态
 
-##### git reset HEAD <file>
+##### git reset HEAD filename
 
 把暂存区的修改撤销掉（unstage），重新放回工作区
 
@@ -67,19 +67,19 @@
 
 查看所含有分支
 
-##### git merge <name>
+##### git merge branname
 
 用于合并指定分支到当前分支
 
-##### git merge --no-ff -m "merge with no-ff" <name>
+##### git merge --no-ff -m "merge with no-ff" branchname
 
 `--no-ff`参数，表示禁用Fast forward
 
-#####  git branch -d <name>
+#####  git branch -d branchname
 
 删除分支(已经合并)
 
-##### git branch -D <name>
+##### git branch -D branchname
 
 删除分支(强行删除)
 
@@ -97,11 +97,11 @@
 
 和`git stash drop`
 
-##### git tag <version> <commitId>
+##### git tag version commitId
 
 git打标签
 
- ##### git tag -a <version> -m <desc> <commitId>
+ ##### git tag -a version -m desc commitId
 
 创建带有说明的标签，用`-a`指定标签名，`-m`指定说明文字
 
