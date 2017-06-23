@@ -1,3 +1,10 @@
+#### centos安装docker
+
+- yum update 更新yum软件包
+- yum -y install docker 自动选择y，全自动安装docker
+- systemctl start docker  启动docker服务
+- systemctl enable docker 设置开机自启动
+
 #### 查看docker信息
 
 * docker version  查看docker版本信息
@@ -43,9 +50,10 @@
 * docker exec -it NAME/ID /bin/bash 进入已经启动容器
 
 
-#### Docker部署nginx
+#### docker部署nginx
 
-
+- docker pull nginx:1.11.10
+- docker run --name webserver -d -p 80:80 nginx:1.11.10
 
 
   ​
