@@ -25,7 +25,7 @@
 
 * docker run -i   以交互模式运行容器，通常与 -t 同时使用
 
-* docker run -d  后天运行容器，并返回容器ID
+* docker run -d  后台运行容器，并返回容器ID
 
 * docker run -v <宿主机目录>:<容器目录>  (容器目录不可以为相对路径
 
@@ -56,7 +56,18 @@
 - docker run --name webserver -d -p 80:80 nginx:1.11.10
 
 
-  ​
+#### docker部署redis
+
+- docker pull redis:3.2.7
+- docker run -d --name redis_master -p 7001:6379 redis:3.2.7
+- docker inspect redis_master | grep IPA
+- docker run -d --name redis_slave -p 7002:6379 redis:3.2.7 --slaveof 172.17.0.3 6379
+- docker exec -it redis_master /bin/bash
+- docker exec -it redis_slave /bin/bash
+
+
+
+  
 
 
 
