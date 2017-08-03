@@ -47,6 +47,14 @@
 
 把暂存区的修改撤销掉（unstage），重新放回工作区
 
+##### git checkout .
+
+放弃本地修改，没有提交的可以回到未修改前版本
+
+##### git clean -df
+
+从工作目录中移除没有track的文件,-d表示同时移除目录,-f表示force
+
 ##### git remote add origin git@server-name:path/repo-name.git
 
 关联一个远程库
