@@ -66,8 +66,12 @@
 - docker exec -it redis_slave /bin/bash
 
 
+#### docker部署activemq
 
-  
+- docker run -d --name activemq-master -p 61616:61616  -p 8161:8161
+
+
+
 
 
 
