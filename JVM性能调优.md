@@ -8,6 +8,10 @@ jps -v 显示JVM参数
 
 #### jstat
 
+> JVM运行了多久
+
+ps -p pid -o etime 
+
 > jstat主要用来输出JVM统计监测信息
 
 jstat -gcutil pid  3s 60 
