@@ -28,6 +28,21 @@ YGCT– 从应用程序启动到采样时 Young GC 所用的时间(单位秒)
 FGC — 从应用程序启动到采样时发生 Full GC 的次数
 FGCT– 从应用程序启动到采样时 Full GC 所用的时间(单位秒)
 GCT — 从应用程序启动到采样时用于垃圾回收的总时间(单位秒)
+
+#### jmap
+
+jmap -heap pid
+
+>查看整个jvm的内存情况
+
+jmap -histo pid
+
+>jvm堆中对象的详细占用情况
+
+jmap -dump:format=b,file=heap.bin pid
+
+> 导出整个JVM 中内存信息，可以利用其它工具打开dump文件分析 
+
 #### JVM参数
 -Xms:指定JVM初始化内存
 -Xmx:指定JVM堆的最大内存，在JVM启动以后，会分配-Xmx参数指定大小的内存给JVM，但是不一定全部使用，JVM会根据-Xms参数来调节真正用于JVM的内存
